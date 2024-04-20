@@ -12,7 +12,7 @@
   --transition-speed: 0.3s;
   --container-width: 80%;
   --container-max-width: 1200px;
-  --spacing-unit: 20px;  
+  --spacing-unit: 20px;            
 }
 
 body {
@@ -25,7 +25,16 @@ body {
   font-size: 16px;
 }
 
-.header {
+.container {
+  max-width: var(--container-max-width);
+  width: var(--container-width);
+  margin: auto;
+  padding: var(--spacing-unit);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: var(--border-radius);
+}
+
+header {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   color: white;
   padding: var(--spacing-unit) 0;
@@ -64,4 +73,43 @@ nav ul li a {
 nav ul li a:hover, nav ul li a:focus {
   background-color: var(--color-primary);
   color: black;
+}
+
+main {
+  background: white;
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-unit);
+}
+
+article {
+  padding: var(--spacing-unit);
+  margin-bottom: var(--spacing-unit);
+}
+
+article a {
+  color: black;
+  transition: color var(--transition-speed);
+}
+
+article a:hover {
+  color: var(--color-accent);
+}
+
+footer {
+  text-align: center;
+  padding: var(--spacing-unit) 0;
+  background-color: var(--color-secondary);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+footer a {
+  color: var(--color-link);
+}
+
+.link-github svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  fill: currentColor;
 }
